@@ -1,5 +1,17 @@
 package com.jaeger.findviewbyme.action;
 
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
+import java.awt.datatransfer.Transferable;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import javax.swing.event.TableModelEvent;
+import javax.swing.event.TableModelListener;
+import javax.swing.table.DefaultTableModel;
+
 import com.intellij.ide.util.PropertiesComponent;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
@@ -14,18 +26,6 @@ import com.jaeger.findviewbyme.util.ActionUtil;
 import com.jaeger.findviewbyme.util.TextUtils;
 import com.jaeger.findviewbyme.util.Utils;
 import com.jaeger.findviewbyme.util.ViewSaxHandler;
-
-import javax.swing.event.TableModelEvent;
-import javax.swing.event.TableModelListener;
-import javax.swing.table.DefaultTableModel;
-import java.awt.*;
-import java.awt.datatransfer.Clipboard;
-import java.awt.datatransfer.StringSelection;
-import java.awt.datatransfer.Transferable;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 /**
  * Created by Jaeger
@@ -207,18 +207,12 @@ public class FindViewByMeXmlAction extends AnAction {
                 if (currentListSelect >= keys.size()) {
                     currentListSelect = 0;
                 }
-//                System.out.println("keys size " + keys.size());
-//                System.out.println("currentListSelect " + currentListSelect);
-
                 oldKeywrod = wrod;
-//                System.out.println("oldKeywrod.equals(wrod) && isMatch " + keys.get(currentListSelect));
-//                System.out.println("值 =   " + value);
                 return keys.get(currentListSelect);
             }
         } else {
             getSearchParts(wrod);
             if (keys != null && keys.size() > 0) {
-//                System.out.println("getSearchParts " + keys.get(currentListSelect));
                 return keys.get(currentListSelect);
             }
             return 0;

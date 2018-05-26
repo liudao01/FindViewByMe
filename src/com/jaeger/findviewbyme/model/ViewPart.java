@@ -1,10 +1,10 @@
 package com.jaeger.findviewbyme.model;
 
-import com.jaeger.findviewbyme.util.Definitions;
-import com.jaeger.findviewbyme.util.Utils;
-
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import com.jaeger.findviewbyme.util.Definitions;
+import com.jaeger.findviewbyme.util.Utils;
 
 /**
  * Created by Jaeger
@@ -23,6 +23,9 @@ public class ViewPart {
 
     private static final String OUTPUT_FIND_VIEW_STRING_FOR_VIEW_HOLDER = "viewHolder.%s = (%s) %s.findViewById(R.id.%s);\n";
     private static final String OUTPUT_FIND_VIEW_STRING_FOR_VIEW_HOLDER_TARGET26 = "viewHolder.%s = %s.findViewById(R.id.%s);\n";
+
+    private static final String OUTPUT_FIND_VIEW_STRING_ADD_LISTENER = ".%s = %s.findViewById(R.id.%s);\n";
+    private static final String OUTPUT_FIND_VIEW_STRING_ADD_ONCLICK = "viewHolder.%s = %s.findViewById(R.id.%s);\n";
 
     private String type;
     private String typeFull;

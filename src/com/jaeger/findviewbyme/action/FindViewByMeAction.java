@@ -203,18 +203,12 @@ public class FindViewByMeAction extends BaseGenerateAction {
                 if (currentListSelect >= keys.size()) {
                     currentListSelect = 0;
                 }
-//                System.out.println("keys size " + keys.size());
-//                System.out.println("currentListSelect " + currentListSelect);
-
                 oldKeywrod = wrod;
-//                System.out.println("oldKeywrod.equals(wrod) && isMatch " + keys.get(currentListSelect));
-//                System.out.println("值 =   " + value);
                 return keys.get(currentListSelect);
             }
         } else {
             getSearchParts(wrod);
             if (keys != null && keys.size() > 0) {
-//                System.out.println("getSearchParts " + keys.get(currentListSelect));
                 return keys.get(currentListSelect);
             }
             return 0;

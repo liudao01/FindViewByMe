@@ -27,6 +27,7 @@ public class FindViewDialog extends JDialog {
     private JCheckBox chbIsTarget26;
     private JTextField editSearch;
     private JButton btnSearch;
+    private JCheckBox chbAddOnclick;
     private onClickListener onClickListener;
 
     public FindViewDialog() {
